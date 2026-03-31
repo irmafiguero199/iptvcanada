@@ -1563,13 +1563,179 @@
       .comp-table th:nth-child(4), .comp-table td:nth-child(4) { display: none; }
     }
     @media (max-width: 640px) {
-      .section-pad { padding: 64px 0; }
+      .section-pad { padding: 56px 0; }
       .trust-grid { grid-template-columns: 1fr; }
       .features-grid { grid-template-columns: 1fr; }
       .pricing-grid { grid-template-columns: 1fr; }
       .devices-grid { grid-template-columns: repeat(3, 1fr); }
       .reviews-grid { grid-template-columns: 1fr; }
       .footer-top { grid-template-columns: 1fr; }
+    }
+
+    /* ═══════════════════════════════════
+       MOBILE FIRST — Complete Mobile Fix
+    ═══════════════════════════════════ */
+    @media (max-width: 480px) {
+
+      /* Base */
+      body { font-size: 15px; }
+      .container { padding: 0 16px; }
+      .section-pad { padding: 48px 0; }
+
+      /* Announcement bar */
+      .announce-bar { font-size: 12px; padding: 8px 36px 8px 12px; line-height: 1.5; }
+
+      /* NAV */
+      #nav { padding: 12px 0; }
+      .nav-logo { font-size: 20px; }
+      .nav-logo-icon { width: 28px; height: 28px; font-size: 14px; }
+      .nav-trial { padding: 8px 14px; font-size: 12px; }
+      .lang-toggle { display: none; }
+
+      /* HERO */
+      #hero { min-height: auto; padding-top: 80px; padding-bottom: 40px; }
+      .hero-h1 { font-size: 48px !important; line-height: .95; margin-bottom: 16px; }
+      .hero-h1 .line1, .hero-h1 .line2, .hero-h1 .line3 { display: block; }
+      .hero-desc { font-size: 15px; margin-bottom: 24px; }
+      .hero-cta { flex-direction: column; gap: 10px; }
+      .hero-cta .btn { width: 100%; justify-content: center; padding: 15px 20px; font-size: 15px; }
+      .hero-stats { gap: 20px; }
+      .hero-stat-num { font-size: 28px; }
+      .hero-badge { font-size: 10px; padding: 4px 10px; }
+      .hero-eyebrow { flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+
+      /* TICKER */
+      .ticker-item { font-size: 12px; padding: 0 24px; }
+
+      /* TRUST */
+      #trust { padding: 40px 0; }
+      .trust-grid { grid-template-columns: 1fr 1fr; gap: 1px; }
+      .trust-item { padding: 20px 16px; }
+      .trust-icon { font-size: 26px; }
+      .trust-title { font-size: 13px; }
+      .trust-desc { font-size: 12px; }
+
+      /* FEATURES */
+      .section-title { font-size: 36px !important; }
+      .section-sub { font-size: 14px; }
+      .feat-card { padding: 24px 20px; }
+      .feat-icon { width: 44px; height: 44px; font-size: 20px; margin-bottom: 14px; }
+      .feat-title { font-size: 15px; }
+      .feat-desc { font-size: 13px; }
+
+      /* PRICING */
+      .pricing-header .section-title { font-size: 36px !important; }
+      .price-card { padding: 24px 20px; }
+      .price-card.popular { transform: none; }
+      .price-num { font-size: 52px; }
+      .price-features { gap: 10px; }
+      .price-feat-item { font-size: 13px; }
+      .pricing-note { font-size: 12px; padding: 0 8px; }
+
+      /* COMPARISON */
+      .comp-table-wrap { border-radius: 12px; }
+      .comp-table { font-size: 12px; }
+      .comp-table th { padding: 10px 12px; font-size: 10px; }
+      .comp-table td { padding: 10px 12px; }
+      .comp-table th:nth-child(3),
+      .comp-table td:nth-child(3),
+      .comp-table th:nth-child(5),
+      .comp-table td:nth-child(5) { display: none; }
+
+      /* CHANNELS */
+      .channels-layout { gap: 32px; }
+      .channels-stats-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .ch-stat-num { font-size: 30px; }
+      .chips { gap: 6px; }
+      .chip { font-size: 11px; padding: 5px 10px; }
+      .province-row { padding: 8px 12px; font-size: 12px; }
+
+      /* DEVICES */
+      .devices-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+      .device-card { padding: 18px 10px; border-radius: 14px; }
+      .device-icon { font-size: 28px; margin-bottom: 8px; }
+      .device-name { font-size: 11px; }
+
+      /* HOW IT WORKS */
+      .step-card { padding: 28px 20px; }
+      .step-num { width: 52px; height: 52px; font-size: 26px; }
+      .step-title { font-size: 16px; }
+      .step-desc { font-size: 13px; }
+
+      /* REVIEWS */
+      .review-card { padding: 20px 16px; }
+      .review-text { font-size: 13px; }
+      .review-name { font-size: 13px; }
+
+      /* FAQ */
+      .faq-layout { gap: 0; }
+      .faq-q { font-size: 14px; padding: 16px 18px; }
+      .faq-a-inner { font-size: 13px; padding: 0 18px 14px; }
+
+      /* CTA BANNER */
+      .cta-box { padding: 32px 20px; border-radius: 20px; }
+      .cta-title { font-size: 34px !important; }
+      .cta-desc { font-size: 14px; }
+      .cta-right { width: 100%; }
+      .cta-right .btn { width: 100%; justify-content: center; }
+
+      /* SEO ARTICLE */
+      .seo-article-layout { grid-template-columns: 1fr; gap: 32px; }
+      .article-h1 { font-size: 22px; }
+      .article-h2 { font-size: 22px; }
+      .article-h3 { font-size: 16px; }
+      .article-intro { font-size: 15px; }
+      .article-feature-grid { grid-template-columns: 1fr; }
+      .province-guide-grid { grid-template-columns: 1fr; }
+      .savings-grid { grid-template-columns: 1fr; }
+      .answer-box p { font-size: 14px; }
+
+      /* FOOTER */
+      .footer-logo { font-size: 22px; }
+      .footer-about { font-size: 12px; }
+      .footer-bottom { flex-direction: column; text-align: center; gap: 12px; }
+      .footer-fr { display: none; }
+
+      /* WHATSAPP BUTTON */
+      .wa-float { bottom: 16px; right: 16px; padding: 13px 16px; border-radius: 50px; }
+      .wa-float span { display: none; }
+      .wa-float svg { width: 26px; height: 26px; }
+
+      /* LABEL */
+      .label { font-size: 10px; padding: 4px 12px; }
+    }
+
+
+    /* Hamburger animation */
+    .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .hamburger span { transition: .25s; }
+
+    /* Mobile nav links */
+    .nav-links.mobile-open a {
+      padding: 13px 16px;
+      border-radius: 10px;
+      font-size: 15px;
+      color: rgba(255,255,255,.85) !important;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.06);
+    }
+    .nav-links.mobile-open a:hover {
+      background: rgba(0,229,255,.1);
+      color: var(--cyan) !important;
+      border-color: rgba(0,229,255,.2);
+    }
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to   { opacity: 1; transform: none; }
+    }
+
+    /* Extra small phones */
+    @media (max-width: 360px) {
+      .hero-h1 { font-size: 40px !important; }
+      .trust-grid { grid-template-columns: 1fr; }
+      .devices-grid { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
@@ -3082,12 +3248,48 @@
 
   /* ── HAMBURGER ── */
   function toggleMenu() {
-    // Simple toggle for mobile nav (extend as needed)
     const links = document.querySelector('.nav-links');
-    if (links) {
-      links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+    const ham = document.querySelector('.hamburger');
+    if (!links) return;
+
+    const isOpen = links.classList.contains('mobile-open');
+    if (isOpen) {
+      links.classList.remove('mobile-open');
+      links.style.cssText = '';
+      ham.classList.remove('active');
+    } else {
+      links.classList.add('mobile-open');
+      links.style.cssText = `
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 56px; left: 0; right: 0;
+        background: rgba(5,5,8,.97);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(255,255,255,.08);
+        padding: 20px 20px 24px;
+        gap: 4px;
+        z-index: 999;
+        animation: slideDown .2s ease;
+      `;
+      ham.classList.add('active');
     }
   }
+
+  // Close menu on link click
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.addEventListener('click', () => {
+        const links = document.querySelector('.nav-links');
+        const ham = document.querySelector('.hamburger');
+        if (links && links.classList.contains('mobile-open')) {
+          links.classList.remove('mobile-open');
+          links.style.cssText = '';
+          if (ham) ham.classList.remove('active');
+        }
+      });
+    });
+  });
 
   /* ── LANG TOGGLE ── */
   function toggleLang() {
