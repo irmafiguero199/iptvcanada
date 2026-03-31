@@ -1,282 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- ═══════════════════════════════════════════════════
-       NorthStream IPTV Canada — Master Sitemap
-       Domain: northstreamiptv.ca
-       Pages: 30 | Updated: March 2026
-  ═══════════════════════════════════════════════════ -->
+  <!-- ✅ ONLY PAGES THAT EXIST ON GITHUB — 5 pages -->
 
-  <!-- PILLAR — Homepage -->
   <url>
     <loc>https://amslerfamilyfoundation.org/index.html</loc>
-    <lastmod>2026-03-01</lastmod>
+    <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en-CA" href="https://amslerfamilyfoundation.org/"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://amslerfamilyfoundation.org/fr/"/>
   </url>
 
-  <!-- PILLAR — Pricing -->
-  <url>
-    <loc>https://amslerfamilyfoundation.org/pricing.html</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-
-  <!-- PILLAR — Free Trial -->
-  <url>
-    <loc>https://amslerfamilyfoundation.org/free-trial.html</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
-  </url>
-
-  <!-- PILLAR — Channels List -->
-  <url>
-    <loc>https://amslerfamilyfoundation.org/channels.html</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-
-  <!-- ═══════════════════════════════════════════════════
-       HUB 2: MONEY / INFORMATIONAL PAGES
-  ═══════════════════════════════════════════════════ -->
-
-  <!-- MONEY PAGE — Best IPTV Canada (4,400/mo) -->
   <url>
     <loc>https://amslerfamilyfoundation.org/best-iptv-canada.html</loc>
-    <lastmod>2026-03-01</lastmod>
+    <lastmod>2026-03-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
 
-  <!-- MONEY PAGE — Cheap IPTV Canada (2,900/mo) -->
   <url>
     <loc>https://amslerfamilyfoundation.org/cheap-iptv-canada.html</loc>
-    <lastmod>2026-03-01</lastmod>
+    <lastmod>2026-03-31</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.95</priority>
   </url>
 
-  <!-- TRUST PAGE — Is IPTV Legal Canada (880/mo) -->
   <url>
     <loc>https://amslerfamilyfoundation.org/is-iptv-legal-canada.html</loc>
-    <lastmod>2026-03-01</lastmod>
+    <lastmod>2026-03-31</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.88</priority>
   </url>
 
-  <!-- COMPARISON — IPTV vs Netflix -->
-  <url>
-    <loc>https://amslerfamilyfoundation.org/iptv-vs-netflix-canada.html</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <!-- COMPARISON — IPTV vs Cable -->
-  <url>
-    <loc>https://amslerfamilyfoundation.org/iptv-vs-cable-canada.html</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <!-- FEATURE — French Channels -->
-  <url>
-    <loc>https://amslerfamilyfoundation.org/french-channels-iptv-canada.html</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-    <xhtml:link rel="alternate" hreflang="en-CA" href="https://amslerfamilyfoundation.org/french-channels-iptv-canada/"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://amslerfamilyfoundation.org/fr/chaines-francaises-iptv-canada/"/>
-  </url>
-
-  <!-- FEATURE — IPTV Sports Canada -->
-  <url>
-    <loc>https://amslerfamilyfoundation.org/iptv-sports-canada.html</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <!-- FEATURE — IPTV 4K Canada -->
-  <url>
-    <loc>https://amslerfamilyfoundation.org/iptv-4k-canada.html</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <!-- ═══════════════════════════════════════════════════
-       HUB 1: PROVINCE HUB PAGES
-  ═══════════════════════════════════════════════════ -->
-
-  <!-- Ontario Hub -->
   <url>
     <loc>https://amslerfamilyfoundation.org/iptv-ontario.html</loc>
-    <lastmod>2026-03-01</lastmod>
+    <lastmod>2026-03-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
-  </url>
-
-  <!-- Quebec Hub (bilingual) -->
-  <url>
-    <loc>https://amslerfamilyfoundation.org/iptv-quebec.html</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
-    <xhtml:link rel="alternate" hreflang="en-CA" href="https://amslerfamilyfoundation.org/iptv-quebec/"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://amslerfamilyfoundation.org/fr/iptv-quebec/"/>
-  </url>
-
-  <!-- Alberta Hub -->
-  <url>
-    <loc>https://amslerfamilyfoundation.org/iptv-alberta.html</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.88</priority>
-  </url>
-
-  <!-- British Columbia Hub -->
-  <url>
-    <loc>https://amslerfamilyfoundation.org/iptv-british-columbia.html</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.88</priority>
-  </url>
-
-  <!-- Manitoba -->
-  <url>
-    <loc>https://amslerfamilyfoundation.org/iptv-manitoba.html</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.78</priority>
-  </url>
-
-  <!-- Nova Scotia -->
-  <url>
-    <loc>https://amslerfamilyfoundation.org/iptv-nova-scotia.html</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <!-- ═══════════════════════════════════════════════════
-       CITY SPOKE PAGES
-  ═══════════════════════════════════════════════════ -->
-
-  <url>
-    <loc>https://amslerfamilyfoundation.org/iptv-toronto.html</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.88</priority>
-  </url>
-
-  <url>
-    <loc>https://amslerfamilyfoundation.org/iptv-montreal.html</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.88</priority>
-    <xhtml:link rel="alternate" hreflang="en-CA" href="https://amslerfamilyfoundation.org/iptv-montreal/"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://amslerfamilyfoundation.org/fr/iptv-montreal/"/>
-  </url>
-
-  <url>
-    <loc>https://amslerfamilyfoundation.org/iptv-calgary.html</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>https://amslerfamilyfoundation.org/iptv-edmonton.html</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.83</priority>
-  </url>
-
-  <url>
-    <loc>https://amslerfamilyfoundation.org/iptv-vancouver.html</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>https://amslerfamilyfoundation.org/iptv-ottawa.html</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.83</priority>
-  </url>
-
-  <!-- ═══════════════════════════════════════════════════
-       HUB 3: DEVICE SETUP GUIDES
-  ═══════════════════════════════════════════════════ -->
-
-  <url>
-    <loc>https://amslerfamilyfoundation.org/iptv-firestick-canada.html</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.88</priority>
-  </url>
-
-  <url>
-    <loc>https://amslerfamilyfoundation.org/iptv-smart-tv-canada.html</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.83</priority>
-  </url>
-
-  <url>
-    <loc>https://amslerfamilyfoundation.org/iptv-iphone-canada.html</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://amslerfamilyfoundation.org/iptv-android-canada.html</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <!-- ═══════════════════════════════════════════════════
-       UTILITY PAGES
-  ═══════════════════════════════════════════════════ -->
-
-  <url>
-    <loc>https://amslerfamilyfoundation.org/contact.html</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.65</priority>
-  </url>
-
-  <url>
-    <loc>https://amslerfamilyfoundation.org/tutorial.html</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <url>
-    <loc>https://amslerfamilyfoundation.org/reseller.html</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-
-  <url>
-    <loc>https://amslerfamilyfoundation.org/blog.html</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
   </url>
 
 </urlset>
