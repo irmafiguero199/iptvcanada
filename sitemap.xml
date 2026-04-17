@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- PILLAR PAGES -->
-  <url><loc>https://amslerfamilyfondation.org/index.html</loc><lastmod>2026-03-31</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://amslerfamilyfondation.org/</loc><lastmod>2026-04-17</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://amslerfamilyfondation.org/pricing.html</loc><lastmod>2026-03-31</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
   <url><loc>https://amslerfamilyfondation.org/free-trial.html</loc><lastmod>2026-03-31</lastmod><changefreq>monthly</changefreq><priority>0.93</priority></url>
   <url><loc>https://amslerfamilyfondation.org/channels.html</loc><lastmod>2026-03-31</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
@@ -29,12 +29,15 @@
   <url><loc>https://amslerfamilyfondation.org/iptv-alberta.html</loc><lastmod>2026-03-31</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
   <url><loc>https://amslerfamilyfondation.org/iptv-bc.html</loc><lastmod>2026-03-31</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
 
+  <!-- PROVINCE HUBS (UPDATED) -->
+  <url><loc>https://amslerfamilyfondation.org/iptv-alberta.html</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
+
   <!-- CITY PAGES -->
-  <url><loc>https://amslerfamilyfondation.org/iptv-toronto.html</loc><lastmod>2026-03-31</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
-  <url><loc>https://amslerfamilyfondation.org/iptv-montreal.html</loc><lastmod>2026-03-31</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
-  <url><loc>https://amslerfamilyfondation.org/iptv-calgary.html</loc><lastmod>2026-03-31</lastmod><changefreq>monthly</changefreq><priority>0.87</priority></url>
-  <url><loc>https://amslerfamilyfondation.org/iptv-ottawa.html</loc><lastmod>2026-03-31</lastmod><changefreq>monthly</changefreq><priority>0.87</priority></url>
-  <url><loc>https://amslerfamilyfondation.org/iptv-vancouver.html</loc><lastmod>2026-03-31</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://amslerfamilyfondation.org/iptv-toronto.html</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.92</priority></url>
+  <url><loc>https://amslerfamilyfondation.org/iptv-montreal.html</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.92</priority></url>
+  <url><loc>https://amslerfamilyfondation.org/iptv-calgary.html</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.87</priority></url>
+  <url><loc>https://amslerfamilyfondation.org/iptv-ottawa.html</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.87</priority></url>
+  <url><loc>https://amslerfamilyfondation.org/iptv-vancouver.html</loc><lastmod>2026-04-17</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
 
   <!-- BLOG / UTILITY -->
   <url><loc>https://amslerfamilyfondation.org/blog.html</loc><lastmod>2026-03-31</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
@@ -46,5 +49,6 @@
   <url><loc>https://amslerfamilyfondation.org/canada-iptv-m3u.html</loc><lastmod>2026-03-31</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
   <url><loc>https://amslerfamilyfondation.org/canada-iptv-box.html</loc><lastmod>2026-03-31</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
   <url><loc>https://amslerfamilyfondation.org/canada-iptv-app.html</loc><lastmod>2026-03-31</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
+  <url><loc>https://amslerfamilyfondation.org/checkout.html</loc><lastmod>2026-03-31</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
 
 </urlset>

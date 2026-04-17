@@ -1,0 +1,490 @@
+const fs = require('fs');
+
+// ── MONTREAL ──────────────────────────────────────────────────────────────
+const mtlContent = `<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>IPTV Montréal 2026 — Meilleur Service IPTV à Montréal | Canadiens, RDS, TVA en 4K</title>
+<meta name="description" content="Meilleur service IPTV à Montréal 2026. Regardez les Canadiens sur RDS & TVA Sports en 4K. Chaînes locales: ICI Radio-Canada, CTV Montréal, Noovo. Dès 12,99$ CAD/mois. Essai gratuit."/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://amslerfamilyfondation.org/iptv-montreal.html" />
+<meta property="og:url" content="https://amslerfamilyfondation.org/iptv-montreal.html" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="fr_CA" />
+<meta property="og:title" content="IPTV Montréal 2026 — Meilleur Service IPTV | Canadiens, RDS, TVA en 4K" />
+<meta property="og:description" content="Meilleur service IPTV à Montréal 2026. Regardez les Canadiens sur RDS & TVA Sports en 4K. Chaînes: ICI Radio-Canada, CTV Montréal, Noovo. Dès 12,99$ CAD/mois." />
+<meta property="og:site_name" content="NorthStream IPTV Canada" />
+<meta property="og:image" content="https://amslerfamilyfondation.org/og-image.svg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="IPTV Montréal 2026 — Meilleur Service IPTV | Canadiens, RDS, TVA en 4K" />
+<meta name="twitter:description" content="Meilleur service IPTV à Montréal 2026. Regardez les Canadiens sur RDS & TVA Sports en 4K. Dès 12,99$ CAD/mois. Essai gratuit." />
+<meta name="twitter:image" content="https://amslerfamilyfondation.org/og-image.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {"@type":"Service","name":"NorthStream IPTV Montréal","description":"Meilleur service IPTV à Montréal. 25 000+ chaînes en direct, RDS, TVA Sports, ICI Radio-Canada, Noovo — tout en 4K Ultra HD.","provider":{"@type":"Organization","name":"NorthStream IPTV Canada"},"areaServed":{"@type":"City","name":"Montréal","addressRegion":"QC","addressCountry":"CA"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"IPTV Montréal Plans","itemListElement":[{"@type":"Offer","name":"Monthly Plan","price":"12.99","priceCurrency":"CAD"},{"@type":"Offer","name":"Yearly Plan","price":"69.99","priceCurrency":"CAD"}]},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"876"}},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"Quel est le meilleur service IPTV à Montréal?","acceptedAnswer":{"@type":"Answer","text":"NorthStream IPTV est le meilleur service IPTV à Montréal, avec 40+ chaînes locales incluant RDS, TVA Sports, ICI Radio-Canada, Noovo, CTV Montréal, tous les matchs des Canadiens, et 25 000+ chaînes au total dès 12,99$ CAD/mois."}},
+      {"@type":"Question","name":"Puis-je regarder les Canadiens sur IPTV à Montréal?","acceptedAnswer":{"@type":"Answer","text":"Oui. NorthStream IPTV inclut RDS, TVA Sports, TSN 1-5, et RDS2 — toutes les chaînes qui diffusent les matchs des Canadiens. Zéro coupure régionale, qualité 4K, sur tous vos appareils."}}
+    ]}
+  ]
+}
+</script>
+
+<style>
+:root{--bg:#050508;--bg2:#0c0c14;--bg3:#12121e;--card:rgba(255,255,255,.04);--border:rgba(255,255,255,.07);--cyan:#00e5ff;--gold:#f0c040;--green:#22d3a0;--white:#fff;--muted:rgba(255,255,255,.55);--font-head:'Bebas Neue',cursive;--font-body:'Plus Jakarta Sans',sans-serif;--font-mono:'JetBrains Mono',monospace;--r:14px;--r2:24px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:var(--font-body);font-size:16px;line-height:1.65;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+.section-pad{padding:80px 0}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:100px;font-weight:700;font-size:14px;transition:.25s;cursor:pointer;border:none;font-family:inherit}
+.btn-cyan{background:var(--cyan);color:var(--bg)}.btn-cyan:hover{background:#fff;transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.2)}.btn-outline:hover{border-color:var(--cyan);color:var(--cyan)}
+#nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:14px 0;background:rgba(5,5,8,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--font-head);font-size:24px;display:flex;align-items:center;gap:8px}
+.nav-logo span{color:var(--cyan)}.logo-icon{width:32px;height:32px;background:var(--cyan);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--bg)}
+.nav-cta{display:flex;gap:10px}
+.breadcrumb{padding:96px 0 0;font-size:12px;color:var(--muted);font-family:var(--font-mono)}
+.breadcrumb a{color:var(--muted)}.breadcrumb a:hover{color:var(--cyan)}.breadcrumb span{margin:0 8px;opacity:.4}
+.label{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);background:rgba(0,229,255,.08);border:1px solid rgba(0,229,255,.2);border-radius:100px;padding:5px 14px;margin-bottom:16px}
+.page-hero{padding:24px 0 60px;background:linear-gradient(180deg,rgba(0,229,255,.04),transparent)}
+.page-h1{font-family:var(--font-head);font-size:clamp(40px,5vw,68px);line-height:1;letter-spacing:.02em;text-transform:uppercase;margin-bottom:16px}
+.page-h1 span{color:var(--cyan)}
+.page-intro{font-size:17px;color:var(--muted);max-width:680px;line-height:1.75;margin-bottom:24px}
+.hero-stats{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:28px}
+.hero-stat{border-left:2px solid rgba(0,229,255,.3);padding-left:14px}
+.stat-num{font-family:var(--font-head);font-size:34px;color:var(--white);line-height:1}
+.stat-num span{color:var(--cyan)}
+.stat-label{font-size:11px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:4px}
+.page-cta{display:flex;gap:12px;flex-wrap:wrap}
+.channel-section{margin-bottom:48px}
+.section-h2{font-family:var(--font-head);font-size:clamp(30px,4vw,46px);letter-spacing:.02em;text-transform:uppercase;margin-bottom:8px}
+.section-h2 span{color:var(--cyan)}
+.section-sub{font-size:15px;color:var(--muted);margin-bottom:24px}
+.sports-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px}
+.sport-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r2);padding:24px;transition:.25s}
+.sport-card:hover{border-color:rgba(0,229,255,.25);transform:translateY(-3px)}
+.sport-icon{font-size:36px;margin-bottom:12px;line-height:1}
+.sport-name{font-weight:800;font-size:17px;margin-bottom:6px}
+.sport-channels{font-family:var(--font-mono);font-size:11px;color:var(--cyan);letter-spacing:.05em;margin-bottom:8px}
+.sport-desc{font-size:13px;color:var(--muted);line-height:1.55}
+.channel-group{margin-bottom:24px}
+.channel-group-label{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:6px 14px;font-size:12px;font-weight:600;transition:.2s}
+.chip:hover{background:rgba(0,229,255,.1);border-color:rgba(0,229,255,.3);color:var(--cyan)}
+.pricing-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:24px 0}
+.price-strip-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:20px;text-align:center;transition:.2s;position:relative}
+.price-strip-card:hover{border-color:rgba(0,229,255,.2)}
+.price-strip-card.featured{border-color:var(--cyan);background:rgba(0,229,255,.05)}
+.pop-tag{position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--cyan);color:var(--bg);font-size:10px;font-weight:800;letter-spacing:.06em;padding:3px 12px;border-radius:100px;white-space:nowrap}
+.strip-plan{font-size:11px;font-family:var(--font-mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
+.strip-price{font-family:var(--font-head);font-size:40px;line-height:1;color:var(--white)}
+.price-strip-card.featured .strip-price{color:var(--cyan)}
+.strip-per{font-size:11px;color:var(--muted);margin-bottom:12px}
+.strip-btn{display:block;padding:9px;border-radius:100px;font-size:12px;font-weight:700;transition:.2s}
+.strip-btn-filled{background:var(--cyan);color:var(--bg)}.strip-btn-filled:hover{background:#fff}
+.strip-btn-outline{border:1px solid rgba(255,255,255,.2);color:var(--white)}.strip-btn-outline:hover{border-color:var(--cyan);color:var(--cyan)}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0}
+.review-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:22px}
+.review-stars{color:var(--gold);font-size:13px;letter-spacing:2px;margin-bottom:10px}
+.review-text{font-size:13px;color:rgba(255,255,255,.8);line-height:1.7;margin-bottom:16px}
+.review-author{display:flex;align-items:center;gap:10px}
+.review-avatar{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--cyan),#0090a8);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;color:var(--bg);flex-shrink:0}
+.review-name{font-weight:700;font-size:13px}
+.review-location{font-size:11px;color:var(--muted)}
+.faq-list{display:flex;flex-direction:column;gap:10px;margin-top:20px}
+.faq-item{background:var(--card);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+.faq-item.open{border-color:rgba(0,229,255,.2)}
+.faq-q{padding:16px 20px;font-weight:700;font-size:14px;display:flex;justify-content:space-between;align-items:center;gap:12px;cursor:pointer}
+.faq-q:hover{color:var(--cyan)}
+.faq-arrow{width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:.25s;font-size:11px}
+.faq-item.open .faq-arrow{background:rgba(0,229,255,.15);border-color:rgba(0,229,255,.3);transform:rotate(45deg);color:var(--cyan)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1)}
+.faq-a-inner{padding:0 20px 16px;font-size:14px;color:var(--muted);line-height:1.75}
+.related-pages{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:20px;margin:32px 0}
+.related-title{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.related-links{display:flex;flex-wrap:wrap;gap:8px}
+.related-links a{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:6px 14px;font-size:13px;font-weight:600;transition:.2s}
+.related-links a:hover{border-color:var(--cyan);color:var(--cyan)}
+.cta-box{background:linear-gradient(135deg,rgba(0,229,255,.1),rgba(0,100,140,.1));border:1px solid rgba(0,229,255,.2);border-radius:var(--r2);padding:48px;text-align:center;margin:32px 0}
+.cta-title{font-family:var(--font-head);font-size:clamp(32px,4vw,52px);letter-spacing:.02em;text-transform:uppercase;margin-bottom:12px}
+.cta-title span{color:var(--cyan)}
+.cta-btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:9999;display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;border-radius:100px;padding:14px 20px 14px 16px;box-shadow:0 8px 32px rgba(37,211,102,.4);font-weight:700;font-size:14px;transition:all .25s;max-width:220px}
+.wa-float:hover{background:#1ebe5d;transform:translateY(-3px);max-width:280px}
+.wa-pulse{position:absolute;inset:0;border-radius:100px;background:#25D366;animation:wa-pulse 2.5s ease-out infinite;z-index:-1}
+@keyframes wa-pulse{0%{transform:scale(1);opacity:.6}70%,100%{transform:scale(1.15);opacity:0}}
+.footer-main{background:#080810;border-top:1px solid rgba(255,255,255,0.07);padding:56px 0 24px;font-size:14px;}
+.footer-main .container{max-width:1200px;margin:0 auto;padding:0 24px;}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:32px;margin-bottom:40px;}
+.footer-col h4{color:#00e676;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px;}
+.footer-col a{display:block;color:rgba(255,255,255,0.55);text-decoration:none;margin-bottom:8px;transition:color .2s;}
+.footer-col a:hover{color:#00e676;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.07);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:rgba(255,255,255,0.35);font-size:13px;}
+.footer-bottom a{color:rgba(255,255,255,0.35);text-decoration:none;}
+.footer-bottom a:hover{color:#00e676;}
+@media(max-width:900px){.sports-grid{grid-template-columns:1fr 1fr}.pricing-strip{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.sports-grid{grid-template-columns:1fr}.pricing-strip{grid-template-columns:1fr}.reviews-grid{grid-template-columns:1fr}.cta-box{padding:32px 20px}.footer-grid{grid-template-columns:repeat(2,1fr);}.footer-bottom{flex-direction:column;text-align:center;}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><div class="logo-icon">▶</div>North<span>Stream</span></a>
+      <div class="nav-cta">
+        <a href="https://wa.me/212776056268" class="btn btn-outline" style="padding:9px 18px;font-size:13px;" target="_blank">💬 WhatsApp</a>
+        <a href="/free-trial.html" class="btn btn-cyan" style="padding:9px 18px;font-size:13px;">🎁 Essai Gratuit</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<a href="https://wa.me/212776056268?text=Bonjour!%20Je%20suis%20à%20Montréal%20et%20je%20voudrais%20un%20abonnement%20IPTV." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <div class="wa-pulse"></div>
+  <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span>IPTV Montréal</span>
+</a>
+
+<main>
+<div class="breadcrumb"><div class="container"><a href="/">Accueil</a><span>›</span><a href="/iptv-quebec.html">IPTV Québec</a><span>›</span>IPTV Montréal</div></div>
+
+<section class="page-hero">
+<div class="container">
+  <div class="label">🏙️ Montréal · Mis à jour avril 2026</div>
+  <h1 class="page-h1">IPTV <span>Montréal</span> 2026<br>Les Canadiens en 4K. Toutes les Chaînes.</h1>
+  <p class="page-intro">Le meilleur service IPTV pour les téléspectateurs de Montréal en 2026. 40+ chaînes locales, tous les matchs des Canadiens sur RDS et TVA Sports, ICI Radio-Canada, Noovo — tout en 4K Ultra HD dès 12,99$ CAD/mois.</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="stat-num">40<span>+</span></div><div class="stat-label">Chaînes Montréal</div></div>
+    <div class="hero-stat"><div class="stat-num">4K</div><div class="stat-label">Ultra HD Sports</div></div>
+    <div class="hero-stat"><div class="stat-num">$12<span>.99</span></div><div class="stat-label">CAD / Mois</div></div>
+    <div class="hero-stat"><div class="stat-num">0</div><div class="stat-label">Coupures</div></div>
+  </div>
+  <div class="page-cta">
+    <a href="/free-trial.html" class="btn btn-cyan" style="padding:15px 30px;font-size:15px;">🎁 Essai Gratuit 24h — Sans Carte</a>
+    <a href="https://wa.me/212776056268" class="btn btn-outline" style="padding:15px 30px;font-size:15px;" target="_blank">💬 WhatsApp</a>
+  </div>
+</div>
+</section>
+
+<section class="section-pad">
+<div class="container">
+
+  <div class="channel-section">
+    <div class="label">Sports de Montréal</div>
+    <h2 class="section-h2">Toutes les <span>Équipes de Montréal</span> en Direct 4K</h2>
+    <p class="section-sub">Zéro coupure. RDS, TVA Sports, et TSN inclus. Toutes les équipes de Montréal dans chaque forfait NorthStream.</p>
+    <div class="sports-grid">
+      <div class="sport-card">
+        <div class="sport-icon">🏒</div>
+        <div class="sport-name">Canadiens de Montréal</div>
+        <div class="sport-channels">RDS · TVA Sports · TSN</div>
+        <div class="sport-desc">Chaque match à domicile et à l'extérieur. Plusieurs flux par match. Qualité 4K durant les séries. Zéro coupure régionale — regardez tous les matchs des Habs depuis Montréal.</div>
+      </div>
+      <div class="sport-card">
+        <div class="sport-icon">⚽</div>
+        <div class="sport-name">CF Montréal</div>
+        <div class="sport-channels">TSN · OneSoccer · RDS</div>
+        <div class="sport-desc">Tous les matchs MLS du CF Montréal. Couverture de la Ligue canadienne de soccer. Regardez les Bleus au stade Saputo en HD depuis votre salon.</div>
+      </div>
+      <div class="sport-card">
+        <div class="sport-icon">🏈</div>
+        <div class="sport-name">Alouettes de Montréal</div>
+        <div class="sport-channels">TSN · RDS</div>
+        <div class="sport-desc">Toute la saison LCF incluant les Alouettes de Montréal à domicile et à l'extérieur. Coupe Grey incluse. Commentaires en français sur RDS disponibles.</div>
+      </div>
+      <div class="sport-card">
+        <div class="sport-icon">🎾</div>
+        <div class="sport-name">Coupe Rogers & Tennis</div>
+        <div class="sport-channels">RDS · TVA Sports · TSN</div>
+        <div class="sport-desc">Coupe Rogers à Montréal, Roland Garros, Wimbledon, US Open — tout inclus. Aucun frais de pay-per-view. Commentaires en français disponibles.</div>
+      </div>
+      <div class="sport-card">
+        <div class="sport-icon">⚽</div>
+        <div class="sport-name">Football International</div>
+        <div class="sport-channels">RDS · TVA Sports · beIN Sports</div>
+        <div class="sport-desc">Ligue 1 (PSG), Ligue des champions, Ligue Europa, matchs de l'équipe nationale canadienne — tout en français sur RDS et TVA Sports.</div>
+      </div>
+      <div class="sport-card">
+        <div class="sport-icon">🏋️</div>
+        <div class="sport-name">Boxe & UFC</div>
+        <div class="sport-channels">TSN · RDS · ESPN</div>
+        <div class="sport-desc">Tous les grands combats de boxe inclus sans frais supplémentaires. UFC Fight Night et Pay-Per-View sur ESPN+ inclus dans votre forfait.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="channel-section">
+    <div class="label">Chaînes Locales Montréal</div>
+    <h2 class="section-h2">Toutes les <span>Chaînes</span> Locales de Montréal</h2>
+    <p class="section-sub">Chaque diffuseur de Montréal — nouvelles, divertissement, sports, et chaînes spécialisées.</p>
+    <div class="channel-group">
+      <div class="channel-group-label">📺 Chaînes Francophones</div>
+      <div class="chips">
+        <span class="chip">ICI Radio-Canada</span>
+        <span class="chip">TVA</span>
+        <span class="chip">Noovo</span>
+        <span class="chip">RDI</span>
+        <span class="chip">LCN</span>
+        <span class="chip">Canal Vie</span>
+        <span class="chip">Évasion</span>
+        <span class="chip">Ici Artv</span>
+        <span class="chip">Télé-Québec</span>
+        <span class="chip">Z</span>
+      </div>
+    </div>
+    <div class="channel-group">
+      <div class="channel-group-label">📺 Chaînes Anglophones</div>
+      <div class="chips">
+        <span class="chip">CBC Montréal</span>
+        <span class="chip">CTV Montréal</span>
+        <span class="chip">Global Montréal</span>
+        <span class="chip">CBC News Network</span>
+        <span class="chip">CTV News Channel</span>
+      </div>
+    </div>
+    <div class="channel-group">
+      <div class="channel-group-label">🏒 Chaînes Sports</div>
+      <div class="chips">
+        <span class="chip">RDS</span><span class="chip">RDS2</span><span class="chip">TVA Sports</span>
+        <span class="chip">TVA Sports 2</span><span class="chip">TSN 1</span><span class="chip">TSN 2</span>
+        <span class="chip">Sportsnet East</span><span class="chip">NFL Network</span><span class="chip">beIN Sports</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="channel-section">
+    <div class="label">Tarifs IPTV Montréal</div>
+    <h2 class="section-h2">Forfaits pour <span>Montréal</span></h2>
+    <p class="section-sub">Tous les forfaits incluent toutes les chaînes de Montréal, sports en 4K, et support 24/7. Sans engagement.</p>
+    <div class="pricing-strip">
+      <div class="price-strip-card">
+        <div class="strip-plan">Mensuel</div>
+        <div class="strip-price">$12<small style="font-size:22px">.99</small></div>
+        <div class="strip-per">CAD / mois · 1 appareil</div>
+        <a href="/checkout.html?plan=monthly" class="strip-btn strip-btn-outline">Commencer</a>
+      </div>
+      <div class="price-strip-card">
+        <div class="strip-plan">3 Mois</div>
+        <div class="strip-price">$39<small style="font-size:22px">.99</small></div>
+        <div class="strip-per">CAD · 2 appareils</div>
+        <a href="/checkout.html?plan=3month" class="strip-btn strip-btn-outline">Commencer</a>
+      </div>
+      <div class="price-strip-card featured">
+        <div class="pop-tag">🔥 Plus Populaire</div>
+        <div class="strip-plan">6 Mois</div>
+        <div class="strip-price">$44<small style="font-size:22px">.99</small></div>
+        <div class="strip-per">CAD · 3 appareils</div>
+        <a href="/checkout.html?plan=6month" class="strip-btn strip-btn-filled">Meilleure Offre</a>
+      </div>
+      <div class="price-strip-card">
+        <div class="strip-plan">Annuel</div>
+        <div class="strip-price">$69<small style="font-size:22px">.99</small></div>
+        <div class="strip-per">CAD · 4 appareils</div>
+        <a href="/checkout.html?plan=yearly" class="strip-btn strip-btn-outline">Annuel</a>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:13px;color:var(--muted);margin-top:16px">🎁 <strong style="color:var(--white)">Essai gratuit 24 heures</strong> — Sans carte bancaire · Virement Interac accepté · Garantie 30 jours</p>
+  </div>
+
+  <div class="channel-section">
+    <h2 class="section-h2">Ce Que Disent les <span>Montréalais</span></h2>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Je regarde les Canadiens sur NorthStream depuis le début de la saison. Zéro lag, même pendant les séries. La qualité RDS est identique à Bell — au cinquième du prix."</p>
+        <div class="review-author"><div class="review-avatar">MB</div><div><div class="review-name">Marc B.</div><div class="review-location">Plateau-Mont-Royal, Montréal, QC</div></div></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"TVA, RDS, et ICI Radio-Canada en qualité parfaite. Le guide EPG est exact pour toutes les chaînes québécoises. Je l'utilise sur 3 téléviseurs simultanément — aucun problème."</p>
+        <div class="review-author"><div class="review-avatar">SL</div><div><div class="review-name">Sophie L.</div><div class="review-location">Laval, QC</div></div></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Matchs des Canadiens en 4K sur mon Firestick. Installation en 5 minutes. J'ai annulé Vidéotron après 6 ans. J'économise 135$/mois. Meilleur IPTV que j'ai testé."</p>
+        <div class="review-author"><div class="review-avatar">PG</div><div><div class="review-name">Pierre G.</div><div class="review-location">Longueuil, QC</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Answer -->
+  <div class="quick-answer channel-section" style="background:rgba(0,229,255,.06);border:1px solid rgba(0,229,255,.2);border-radius:var(--r2);padding:24px 28px;margin-bottom:0">
+    <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);margin-bottom:10px">⚡ Réponse Rapide</div>
+    <p style="font-weight:700;font-size:15px;margin-bottom:8px">Quel est le meilleur service IPTV à Montréal?</p>
+    <p style="color:var(--muted);font-size:14px;margin:0">NorthStream IPTV est le meilleur service IPTV à Montréal, avec 40+ chaînes locales dont RDS, TVA Sports, ICI Radio-Canada, tous les matchs des Canadiens, et 25 000+ chaînes au total dès 12,99$ CAD/mois avec un essai gratuit de 24 heures.</p>
+  </div>
+
+  <!-- Steps Section -->
+  <div class="steps-section channel-section" style="margin-top:32px">
+    <h2 class="section-h2">Comment Installer IPTV à <span>Montréal</span></h2>
+    <div style="display:flex;flex-direction:column;gap:20px;margin-top:20px">
+      <div class="step-item" style="display:flex;gap:16px;align-items:flex-start">
+        <div style="min-width:36px;height:36px;border-radius:50%;background:var(--cyan);color:var(--bg);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:18px;font-weight:700;flex-shrink:0">1</div>
+        <div><div style="font-weight:700;font-size:15px;margin-bottom:4px">Choisir NorthStream IPTV</div><p style="color:var(--muted);font-size:14px;margin:0">IPTV Montréal dès 12,99$ CAD/mois — RDS, TVA Sports, ICI Radio-Canada, Noovo, et tous les matchs des Canadiens inclus.</p></div>
+      </div>
+      <div class="step-item" style="display:flex;gap:16px;align-items:flex-start">
+        <div style="min-width:36px;height:36px;border-radius:50%;background:var(--cyan);color:var(--bg);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:18px;font-weight:700;flex-shrink:0">2</div>
+        <div><div style="font-weight:700;font-size:15px;margin-bottom:4px">Activer l'Essai Gratuit</div><p style="color:var(--muted);font-size:14px;margin:0">Testez toutes les chaînes gratuitement pendant 24 heures — sans carte bancaire. Accès instantané à RDS et TVA Sports.</p></div>
+      </div>
+      <div class="step-item" style="display:flex;gap:16px;align-items:flex-start">
+        <div style="min-width:36px;height:36px;border-radius:50%;background:var(--cyan);color:var(--bg);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:18px;font-weight:700;flex-shrink:0">3</div>
+        <div><div style="font-weight:700;font-size:15px;margin-bottom:4px">Installer IPTV Smarters</div><p style="color:var(--muted);font-size:14px;margin:0">Téléchargez IPTV Smarters Pro sur votre Firestick, Smart TV, ou Android en 5 minutes.</p></div>
+      </div>
+      <div class="step-item" style="display:flex;gap:16px;align-items:flex-start">
+        <div style="min-width:36px;height:36px;border-radius:50%;background:var(--cyan);color:var(--bg);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:18px;font-weight:700;flex-shrink:0">4</div>
+        <div><div style="font-weight:700;font-size:15px;margin-bottom:4px">Regardez en 4K</div><p style="color:var(--muted);font-size:14px;margin:0">Accédez à RDS, TVA Sports, tous les matchs des Canadiens, et 25 000+ chaînes depuis votre salon.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="channel-section">
+    <h2 class="section-h2">FAQ IPTV <span>Montréal</span></h2>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <div class="faq-q" onclick="toggleFaq(this)">Quel est le meilleur service IPTV à Montréal en 2026?<span class="faq-arrow">+</span></div>
+        <div class="faq-a" style="max-height:300px"><div class="faq-a-inner">NorthStream IPTV est le service IPTV #1 à Montréal pour 2026. Il offre 40+ chaînes locales de Montréal, couverture complète des Canadiens (RDS, TVA Sports), CF Montréal, Alouettes, ICI Radio-Canada, Noovo, LCN — et 25 000+ chaînes au total dès 12,99$ CAD/mois sans contrat.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">L'IPTV fonctionne-t-il avec Bell, Vidéotron et Rogers à Montréal?<span class="faq-arrow">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Oui. NorthStream IPTV fonctionne avec tous les fournisseurs internet à Montréal: Bell, Vidéotron, Rogers, TekSavvy, Distributel. Vous avez besoin d'au minimum 25 Mbps pour la diffusion 4K. Si votre FAI limite le streaming, un VPN résout cela immédiatement.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Puis-je regarder les matchs des Canadiens en français sur IPTV?<span class="faq-arrow">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Oui — RDS et TVA Sports sont inclus dans tous les forfaits NorthStream. Vous avez accès aux commentaires en français pour chaque match des Canadiens. RDS2 est également inclus pour les matchs en parallèle. Aucune coupure régionale.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Combien coûte l'IPTV à Montréal vs Bell ou Vidéotron?<span class="faq-arrow">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Bell et Vidéotron coûtent 110-180$/mois avec les forfaits sportifs. NorthStream IPTV coûte 12,99$/mois ou 69,99$/an — économies moyennes de 1 200-2 000$ par an pour les ménages montréalais. Mêmes chaînes incluant RDS et TVA Sports, sans location d'équipement.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RELATED PAGES -->
+  <div class="related-pages">
+    <div class="related-title">📖 Plus de Guides IPTV Montréal & Québec</div>
+    <div class="related-links">
+      <a href="/iptv-quebec.html">IPTV Québec</a>
+      <a href="/french-channels-iptv-canada.html">Chaînes Françaises IPTV</a>
+      <a href="/best-iptv-canada.html">Meilleur IPTV Canada</a>
+      <a href="/iptv-sports-canada.html">Sports Canada</a>
+      <a href="/is-iptv-legal-canada.html">IPTV Légal Canada?</a>
+      <a href="/channels.html">Liste des Chaînes</a>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-box">
+    <div class="cta-title">Le Meilleur IPTV à <span>Montréal</span><br>Commencez Gratuitement</div>
+    <p style="color:var(--muted);margin-bottom:24px;font-size:15px">Essai 24h. Sans carte bancaire. Toutes les chaînes de Montréal incluses. Annulez à tout moment.</p>
+    <div class="cta-btns">
+      <a href="/free-trial.html" class="btn btn-cyan" style="padding:15px 30px;font-size:15px;">🎁 Démarrer l'Essai Gratuit</a>
+      <a href="https://wa.me/212776056268" class="btn btn-outline" target="_blank" style="padding:15px 30px;font-size:15px;">💬 WhatsApp</a>
+    </div>
+  </div>
+
+</div>
+</section>
+
+  <!-- See Also -->
+  <section class="see-also" style="background:var(--bg2);border-top:1px solid var(--border);padding:40px 0">
+    <div class="container">
+      <h2 style="font-family:var(--font-head);font-size:clamp(22px,2.5vw,30px);letter-spacing:.04em;text-transform:uppercase;margin-bottom:20px">Voir Aussi</h2>
+      <ul style="list-style:none;display:flex;flex-wrap:wrap;gap:12px;padding:0;margin:0">
+        <li><a href="/iptv-quebec.html">IPTV Québec</a></li>
+        <li><a href="/french-channels-iptv-canada.html">Chaînes Françaises</a></li>
+        <li><a href="/iptv-sports-canada.html">Sports Canada</a></li>
+        <li><a href="/best-iptv-canada.html">Meilleur IPTV Canada 2026</a></li>
+        <li><a href="/free-trial.html">Essai Gratuit 24h</a></li>
+      </ul>
+    </div>
+  </section>
+  <style>
+  .see-also ul li a{display:inline-block;padding:9px 18px;background:var(--card);border:1px solid var(--border);border-radius:100px;font-size:13px;font-weight:600;color:var(--white);transition:.2s}
+  .see-also ul li a:hover{border-color:var(--cyan);color:var(--cyan);background:rgba(0,229,255,.06)}
+  </style>
+</main>
+
+<footer class="footer-main">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>NorthStream</h4>
+        <a href="/index.html">Accueil</a>
+        <a href="/pricing.html">Tarifs</a>
+        <a href="/free-trial.html">Essai 24h Gratuit</a>
+        <a href="/channels.html">Liste des Chaînes</a>
+        <a href="/checkout.html">S'abonner</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Guides IPTV</h4>
+        <a href="/best-iptv-canada.html">Meilleur IPTV Canada</a>
+        <a href="/cheap-iptv-canada.html">IPTV Pas Cher</a>
+        <a href="/is-iptv-legal-canada.html">IPTV Légal?</a>
+        <a href="/iptv-vs-cable-canada.html">IPTV vs Câble</a>
+        <a href="/iptv-vs-netflix-canada.html">IPTV vs Netflix</a>
+        <a href="/blog.html">Blog IPTV</a>
+      </div>
+      <div class="footer-col">
+        <h4>Chaînes</h4>
+        <a href="/french-channels-iptv-canada.html">Chaînes Françaises</a>
+        <a href="/iptv-sports-canada.html">Sports</a>
+        <a href="/iptv-4k-canada.html">Chaînes 4K</a>
+        <a href="/channels.html">Toutes les Chaînes</a>
+        <a href="/canada-iptv-m3u.html">Playlist M3U</a>
+      </div>
+      <div class="footer-col">
+        <h4>Appareils</h4>
+        <a href="/iptv-firestick-canada.html">Firestick</a>
+        <a href="/iptv-smart-tv-canada.html">Smart TV</a>
+        <a href="/canada-iptv-app.html">Application IPTV</a>
+        <a href="/canada-iptv-box.html">Boîtier IPTV</a>
+      </div>
+      <div class="footer-col">
+        <h4>Villes</h4>
+        <a href="/iptv-montreal.html">IPTV Montréal</a>
+        <a href="/iptv-quebec.html">IPTV Québec</a>
+        <a href="/iptv-toronto.html">IPTV Toronto</a>
+        <a href="/iptv-ontario.html">IPTV Ontario</a>
+        <a href="/iptv-vancouver.html">IPTV Vancouver</a>
+        <a href="/iptv-ottawa.html">IPTV Ottawa</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 NorthStream IPTV Canada. Tous droits réservés.</span>
+      <span>
+        <a href="/privacy.html">Confidentialité</a> &nbsp;·&nbsp;
+        <a href="/terms.html">CGU</a> &nbsp;·&nbsp;
+        <a href="/dmca.html">DMCA</a> &nbsp;·&nbsp;
+        <a href="/contact.html">Contact</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleFaq(el){const item=el.parentElement,a=item.querySelector('.faq-a'),isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight='0'});if(!isOpen){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px'}}
+document.querySelectorAll('.faq-item.open').forEach(i=>{const a=i.querySelector('.faq-a');if(a)a.style.maxHeight=a.scrollHeight+'px'});
+</script>
+</body>
+</html>`;
+
+fs.writeFileSync('iptv-montreal.html', mtlContent, 'utf8');
+console.log('✅ Created iptv-montreal.html (' + mtlContent.length + ' bytes)');
